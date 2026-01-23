@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@RequestMapping("/realStu")
+@RequestMapping("/get")
 public class GetFromDB {
 
     // private final Repository.StudentRepository studentRepository;
@@ -24,7 +24,7 @@ public class GetFromDB {
         this.studentRepository = studentRepository;
     }
 
-    @GetMapping()
+    @GetMapping("/stu")
     public List<Student_Tb> getMethodRDB() {
         return studentRepository.findAll();
     }
